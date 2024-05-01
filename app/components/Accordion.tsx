@@ -6,17 +6,20 @@ import { PlusIcon } from "./PlusIcon";
 import { faqContent } from "./../../utils/faq-content";
 
 export default function AccordionComponent() {
+
+    const itemClasses = {
+      title:
+        "text-dark-purple font-semibold text-base hover:text-[#AD28EB]",
+      content: "text-grayish-purple text-sm py-7",
+    };
   return (
     <div>
-      <Accordion>
+      <Accordion itemClasses={itemClasses}>
         {faqContent.map((item, i) => {
           return (
             <AccordionItem
-              className="text-grayish-purple py-4"
               key={i}
-              title={
-                <h2 className="text-dark-purple font-semibold text-base">{item.question}</h2>
-              }
+              title={item.question}
               indicator={({ isOpen }) =>
                 isOpen ? <MinusIcon /> : <PlusIcon />
               }

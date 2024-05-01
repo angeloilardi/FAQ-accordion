@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${workSans.className} min-h-dvh bg-light-pink bg-[url('/images/background-pattern-mobile.svg')] lg:bg-[url('/images/background-pattern-desktop.svg')] bg-no-repeat bg-contain bg-top`}
+        className={`${workSans.className} min-h-dvh bg-light-pink bg-[url('/images/background-pattern-mobile.svg')] md:bg-[url('/images/background-pattern-desktop.svg')] bg-no-repeat bg-contain bg-top`}
       >
         <NextUIProvider className="min-h-dvh flex justify-center items-center">
           {children}

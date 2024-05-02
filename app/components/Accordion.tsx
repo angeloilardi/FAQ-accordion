@@ -14,10 +14,22 @@ export default function AccordionComponent() {
     };
   return (
     <div>
-      <Accordion itemClasses={itemClasses}>
+      <Accordion
+        itemClasses={itemClasses}
+        motionProps={{
+          variants: {
+            endingY: {
+              y: 0,
+            },
+          },
+        }}
+      >
         {faqContent.map((item, i) => {
           return (
             <AccordionItem
+              classNames={{
+                indicator: "data-[open=true]:rotate-0",
+              }}
               key={i}
               title={item.question}
               indicator={({ isOpen }) =>
